@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+/* The following Tailwind directives require processing by Tailwind CSS via a build tool (e.g., PostCSS). 
+   If you see "Unknown at rule @tailwind", ensure your build setup is correct. 
+   Remove these lines if you are not using Tailwind or if you want to avoid the error in plain CSS. */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -204,7 +207,7 @@
   }
 }
 
-@keyframes marquee {
+/* @keyframes marquee {
   0%   { transform: translateX(0%); }
   100% { transform: translateX(-50%); }
 }
@@ -213,4 +216,4 @@
   animation: marquee 20s linear infinite;
   display: flex;
   width: max-content;
-}
+} */
