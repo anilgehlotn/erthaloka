@@ -5,6 +5,10 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import heroEarth from '@/assets/hero-earth.jpg';
 import aboutCommunity from '@/assets/about-community.jpg';
+import logo from '@/assets/logo.jpeg';
+
+// import { Button } from "@/components/ui/button";
+// import { FileText, Users, Globe } from "lucide-react"; // icons
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,34 +26,36 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-eco-subtle">
+    <div>
       {/* Navbar */}
-      <nav className="fixed top-0 w-full z-50 bg-white/10 backdrop-blur-lg border-b border-white/20">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-gradient-eco">
-              ErthaLoka
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#ecosystem" className="text-foreground/80 hover:text-primary transition-colors">Ecosystem</a>
+
+      {/* <nav className="fixed top-0 w-full z-50 bg-white border-b border-gray-200"> </nav> 
+        <div className="container mx-auto px-6 py-4"> </div>
+          <div className="flex items-center justify-between"> </div> 
+            <div className="text-2xl font-bold text-gradient-eco"> </div>  */}
+
+              {/* <img src = {logo} alt="ErthaLoka"   className="w-32 h-auto mx-auto object-contain"  /> */}
+            {/* </div> */}
+            {/* <div className="hidden md:flex space-x-8"> </div> */}
+              {/* <a href="#ecosystem" className="text-foreground/80 hover:text-primary transition-colors">Ecosystem</a>
               <a href="https://el-cc.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-primary transition-colors">ErthaDAO</a>
               <a href="#innovation" className="text-foreground/80 hover:text-primary transition-colors">Innovation</a>
               <a href="https://el-cc.vercel.app/" className="text-foreground/80 hover:text-primary transition-colors">Erthas</a>
               {/* <Button   variant="outline" size="sm">Connect</Button> */}
-              <Button asChild variant="outline" size="sm">
+              {/* <Button asChild variant="outline" size="sm">
   <a href="https://el-dao.onrender.com/." target="_blank" rel="noopener noreferrer">
     Connect
   </a>
-</Button>
-            </div>
-            <button 
+</Button>  */}
+            {/* </div> */}
+            {/* <button 
               className="md:hidden text-foreground"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-          {isMenuOpen && (
+            </button> */}
+          {/* </div> */}
+          {/* {isMenuOpen && (
             <div className="md:hidden mt-4 pb-4 space-y-2">
               <a href="#ecosystem" className="block py-2 text-foreground/80 hover:text-primary">Ecosystem</a>
               <a href="https://el-cc.vercel.app/" target="_blank" rel="noopener noreferrer" className="block py-2 text-foreground/80 hover:text-primary">ErthaDA</a>
@@ -57,12 +63,12 @@ const Index = () => {
               <a href="https://el-cc.vercel.app/" className="block py-2 text-foreground/80 hover:text-primary">Erthas</a>
               <Button variant="outline" size="sm" className="mt-2">Connect</Button>
             </div>
-          )}
-        </div>
-      </nav>
+          )} */}
+        {/* </div> */}
+      {/* </nav> */}
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroEarth})` }}
@@ -89,7 +95,104 @@ const Index = () => {
             <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <nav className="fixed top-0 w-full z-50 bg-white border-b border-gray-200">
+  <div className="container mx-auto px-6 py-4">
+    <div className="flex items-center justify-between">
+      
+      {/* Logo */}
+      <a href="/" className="flex items-center">
+        <img 
+          src={logo} 
+          alt="ErthaLoka" 
+          className="h-10 w-auto object-contain logo-img" 
+        />
+      </a>
+
+      {/* Desktop Menu */}
+      <div className="hidden md:flex space-x-8">
+        <a href="#ecosystem" className="text-foreground/80 hover:text-primary transition-colors">Ecosystem</a>
+        <a href="https://el-cc.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-primary transition-colors">ErthaDAO</a>
+        <a href="#innovation" className="text-foreground/80 hover:text-primary transition-colors">Innovation</a>
+        <a href="https://el-cc.vercel.app/" className="text-foreground/80 hover:text-primary transition-colors">Erthas</a>
+        <Button asChild variant="outline" size="sm">
+          <a href="https://el-dao.onrender.com/" target="_blank" rel="noopener noreferrer">
+            Connect
+          </a>
+        </Button>
+      </div>
+
+      {/* Mobile Menu Button */}
+      <button 
+        className="md:hidden text-foreground"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
+    </div>
+
+    {/* Mobile Menu */}
+    {isMenuOpen && (
+      <div className="md:hidden mt-4 pb-4 space-y-2">
+        <a href="#ecosystem" className="block py-2 text-foreground/80 hover:text-primary">Ecosystem</a>
+        <a href="https://el-cc.vercel.app/" target="_blank" rel="noopener noreferrer" className="block py-2 text-foreground/80 hover:text-primary">ErthaDAO</a>
+        <a href="#innovation" className="block py-2 text-foreground/80 hover:text-primary">Innovation</a>
+        <a href="https://el-cc.vercel.app/" className="block py-2 text-foreground/80 hover:text-primary">Erthas</a>
+        <Button variant="outline" size="sm" className="mt-2">Connect</Button>
+      </div>
+    )}
+  </div>
+</nav>
+
+
+      <section className="relative h-screen flex items-center justify-center overflow-hidden font-sans">
+  {/* Background Image */}
+  <div 
+    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+    style={{ backgroundImage: `url(${heroEarth})` }}
+  />
+  
+  {/* Overlay Gradient */}
+  <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80" />
+
+  {/* Content */}
+  <div className="relative z-10 text-center px-6 max-w-6xl mx-auto animate-fade-in-up">
+    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-6">
+      Unleashing the <span className="text-emerald-400">Web3</span><br />
+      Revolution in <span className="text-emerald-400">Regeneration</span><br />
+      and <span className="text-emerald-400">Sustainability</span>
+    </h1>
+
+    <p className="text-lg sm:text-xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed">
+      A regenerative ecosystem for <span className="font-semibold text-white">People, Planet & Purpose</span> — 
+      driven by communities and enabled by blockchain technology.
+    </p>
+
+    {/* CTA Buttons */}
+    <div className="flex flex-col sm:flex-row gap-6 justify-center">
+      <a 
+        href="https://el-dao.onrender.com/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="px-8 py-4 text-lg font-semibold rounded-xl bg-emerald-500 text-white hover:bg-emerald-600 transition shadow-lg"
+      >
+        Join the Community
+      </a>
+      <button className="px-8 py-4 text-lg font-semibold rounded-xl border border-gray-300 text-white hover:bg-white/10 transition">
+        Learn More
+      </button>
+    </div>
+  </div>
+
+  {/* Scroll Indicator */}
+  <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center items-start">
+      <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+    </div>
+  </div>
+</section>
+
 
       {/* About Section */}
       <section id="about" className="py-20 px-6">
@@ -140,12 +243,12 @@ const Index = () => {
         </div>
       </section>
 
-      {/* EcoVerse Model */}
+      {/* EcoVerse Model
       <section id="ecoverse" className="py-20 px-6 bg-gradient-eco-subtle">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 text-gradient-eco">
-              The EcoVerse Model
+              The Ecoverse Model
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Three interconnected pillars that create a regenerative ecosystem for sustainable living and thriving communities.
@@ -202,7 +305,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Ecosystem Section */}
       <section id="ecosystem" className="py-20 px-6">
@@ -294,8 +397,72 @@ const Index = () => {
         </div>
       </section>
 
+       {/* EcoVerse Model */}
+      <section id="ecoverse" className="py-20 px-6 bg-gradient-eco-subtle">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6 text-gradient-eco">
+              The Ecoverse Model
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Three interconnected pillars that create a regenerative ecosystem for sustainable living and thriving communities.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="card-eco animate-fade-in-up group">
+              <div className="text-center">
+                <div className="w-20 h-20 bg-gradient-to-r from-eco-primary to-eco-secondary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:animate-pulse-glow">
+                  <Users className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-gradient-eco">People</h3>
+                <h4 className="text-lg font-semibold mb-4 text-foreground">Community-Centered Living</h4>
+                <ul className="text-left space-y-2 text-muted-foreground">
+                  <li>• Eco-villages and co-housing</li>
+                  <li>• Decentralized Autonomous Organizations</li>
+                  <li>• Collaborative decision-making</li>
+                  <li>• Regenerative education systems</li>
+                  <li>• Cultural exchange programs</li>
+                </ul>
+              </div>
+            </div>
+            <div className="card-eco animate-fade-in-up group" style={{ animationDelay: '0.2s' }}>
+              <div className="text-center">
+                <div className="w-20 h-20 bg-gradient-to-r from-eco-secondary to-eco-forest rounded-full flex items-center justify-center mx-auto mb-6 group-hover:animate-pulse-glow">
+                  <Leaf className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-gradient-eco">Planet</h3>
+                <h4 className="text-lg font-semibold mb-4 text-foreground">Regenerative Systems</h4>
+                <ul className="text-left space-y-2 text-muted-foreground">
+                  <li>• Closed-loop food-water-energy systems</li>
+                  <li>• Climate-resilient design</li>
+                  <li>• AI and IoT for optimization</li>
+                  <li>• Biodiversity conservation</li>
+                  <li>• Waste-to-resource transformation</li>
+                </ul>
+              </div>
+            </div>
+            <div className="card-eco animate-fade-in-up group" style={{ animationDelay: '0.4s' }}>
+              <div className="text-center">
+                <div className="w-20 h-20 bg-gradient-to-r from-eco-accent to-eco-earth rounded-full flex items-center justify-center mx-auto mb-6 group-hover:animate-pulse-glow">
+                  <Lightbulb className="w-10 h-10 text-foreground" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-gradient-eco">Purpose</h3>
+                <h4 className="text-lg font-semibold mb-4 text-foreground">Values-Driven Innovation</h4>
+                <ul className="text-left space-y-2 text-muted-foreground">
+                  <li>• Local digital currencies</li>
+                  <li>• Cultural regeneration projects</li>
+                  <li>• Creative expression platforms</li>
+                  <li>• Impact measurement systems</li>
+                  <li>• Knowledge sharing networks</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Partners Section */}
-      <section className="py-20 px-6 bg-gradient-eco-subtle">
+      {/* <section className="py-20 px-6 bg-gradient-eco-subtle">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 text-gradient-eco">
@@ -323,9 +490,63 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Get Involved Section */}
+      {/* <section className="py-20 px-6 bg-gradient-eco-subtle"> </section>
+  <div className="container mx-auto max-w-6xl"> </div>
+    <div className="text-center mb-16"> </div>
+      <h2 className="text-4xl font-bold mb-6 text-gradient-eco">
+        Our Partners
+      </h2>
+      <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+        Working together with innovative organizations to build a regenerative future.
+      </p> */}
+    {/* </div> */}
+
+    {/* Marquee Wrapper */}
+    {/* <div className="overflow-hidden relative w-full"> </div>
+      <div className="flex animate-marquee space-x-16"> </div> */}
+        {/* One loop of partners */}
+        {/* <div className="card-feature text-center">
+          <h3 className="text-lg font-semibold text-foreground">River Venture Studio</h3>
+        </div>
+        <div className="card-feature text-center">
+          <h3 className="text-lg font-semibold text-foreground">AIC-PECF</h3>
+        </div>
+        <div className="card-feature text-center">
+          <h3 className="text-lg font-semibold text-foreground">Francais Sports Club</h3>
+        </div>
+        <div className="card-feature text-center">
+          <h3 className="text-lg font-semibold text-foreground">River Venture Studio</h3>
+        </div>
+        <div className="card-feature text-center">
+          <h3 className="text-lg font-semibold text-foreground">AIC-PECF</h3>
+        </div> */}
+
+        {/* Duplicate for seamless loop */}
+        {/* <div className="card-feature text-center">
+          <h3 className="text-lg font-semibold text-foreground">River Venture Studio</h3>
+        </div>
+        <div className="card-feature text-center">
+          <h3 className="text-lg font-semibold text-foreground">AIC-PECF</h3>
+        </div>
+        <div className="card-feature text-center">
+          <h3 className="text-lg font-semibold text-foreground">Francais Sports Club</h3>
+        </div>
+        <div className="card-feature text-center">
+          <h3 className="text-lg font-semibold text-foreground">River Venture Studio</h3>
+        </div>
+        <div className="card-feature text-center">
+          <h3 className="text-lg font-semibold text-foreground">AIC-PECF</h3>
+        </div> */}
+      {/* </div> */}
+    {/* // </div> */}
+  {/* // </div> */}
+{/* </section> */}
+
+
+
+      {/* Get Involved Section
       <section id="initiatives" className="py-20 px-6">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-6 text-gradient-eco">
@@ -346,7 +567,143 @@ const Index = () => {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      
+<section className="py-20 px-6 bg-gradient-to-b from-emerald-50 via-white to-emerald-50">
+  <div className="container mx-auto max-w-6xl">
+    {/* Partners Section */}
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-bold mb-6 text-gradient-eco">
+        Our Partners
+      </h2>
+      <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+        Collaborating with forward-thinking organizations to build a
+        decentralized, regenerative future.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+{/* Get Involved Section
+<section
+  id="initiatives"
+  className="py-20 px-6 bg-gradient-to-t from-emerald-50 via-white to-emerald-50"
+>
+  <div className="container mx-auto max-w-4xl text-center">
+    <h2 className="text-4xl font-bold mb-6 text-gradient-eco">
+      Get Involved
+    </h2>
+    <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
+      Builders, validators, investors, and dreamers—this is your moment.
+      Join our community-driven ecosystem to shape a transparent,
+      decentralized, and regenerative future.
+    </p>
+    <div className="flex flex-col sm:flex-row gap-6 justify-center">
+      <Button size="lg" className="btn-hero-primary">
+        Read Whitepaper
+      </Button>
+      <Button size="lg" variant="outline">
+        Become a Validator
+      </Button>
+      <Button size="lg" variant="secondary">
+        Join the Community
+      </Button>
+    </div>
+  </div>
+</section> */}
+
+
+
+<section className="relative py-24 px-6 bg-gradient-to-b from-emerald-50 via-white to-emerald-50 overflow-hidden">
+  <div className="container mx-auto max-w-6xl relative z-10">
+    {/* Partners Section */}
+    {/* <div className="text-center mb-20">
+      <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent">
+        Our Partners
+      </h2>
+      <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+        Working alongside visionary organizations to build a transparent,
+        decentralized, and regenerative ecosystem.
+      </p>
+    </div> */}
+
+    {/* Partner Marquee */}
+    <div className="overflow-hidden relative w-full mb-28">
+      <div className="flex animate-marquee space-x-16">
+        {[
+          "River Venture Studio",
+          "AIC-PECF",
+          "Francais Sports Club",
+          "EcoChain Labs",
+          "Green Future Network",
+        ].map((partner, i) => (
+          <div
+            key={i}
+            className="px-8 py-4 rounded-xl bg-white shadow-md border border-emerald-100 min-w-[220px] text-center hover:shadow-lg hover:shadow-emerald-100/50 transition"
+          >
+            <h3 className="text-lg font-semibold text-emerald-700">{partner}</h3>
+          </div>
+        ))}
+
+        {/* Duplicate for seamless loop */}
+        {[
+          "River Venture Studio",
+          "AIC-PECF",
+          "Francais Sports Club",
+          "EcoChain Labs",
+          "Green Future Network",
+        ].map((partner, i) => (
+          <div
+            key={i + 10}
+            className="px-8 py-4 rounded-xl bg-white shadow-md border border-emerald-100 min-w-[220px] text-center hover:shadow-lg hover:shadow-emerald-100/50 transition"
+          >
+            <h3 className="text-lg font-semibold text-emerald-700">{partner}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    {/* Get Involved Section */}
+    <div className="text-center">
+      <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-600 to-emerald-600 bg-clip-text text-transparent">
+        Get Involved
+      </h2>
+      <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+        Builders, validators, investors, and dreamers—this is your call.  
+        Join our community-driven ecosystem to shape a future of transparency,
+        decentralization, and trust.
+      </p>
+
+      <div className="flex flex-col sm:flex-row gap-6 justify-center">
+        <Button
+          size="lg"
+          className="bg-emerald-500 hover:bg-emerald-400 text-white font-semibold px-8 py-4 rounded-2xl shadow-md transition"
+        >
+          Read Whitepaper
+        </Button>
+        <Button
+          size="lg"
+          className="border border-emerald-400 text-emerald-600 hover:bg-emerald-50 px-8 py-4 rounded-2xl"
+          variant="outline"
+        >
+          Become a Validator
+        </Button>
+        <Button
+          size="lg"
+          className="bg-cyan-500 hover:bg-cyan-400 text-white font-semibold px-8 py-4 rounded-2xl shadow-md transition"
+          variant="secondary"
+        >
+          Join the Community
+        </Button>
+      </div>
+    </div>
+  </div>
+</section>
+
+      
 
       {/* Contact Form */}
       <section id="contact" className="py-20 px-6 bg-gradient-eco-subtle">
