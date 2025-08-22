@@ -460,6 +460,81 @@ const Index = () => {
           </div>
         </div>
       </section>
+      <section className="py-24 px-6 bg-gradient-to-b from-emerald-50 via-white to-emerald-50 relative overflow-hidden">
+  <div className="container mx-auto max-w-6xl">
+    {/* Heading */}
+    <div className="text-center mb-20">
+      <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent">
+        Our Partners
+      </h2>
+      <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+        Working alongside visionary organizations to build a transparent,
+        decentralized, and regenerative ecosystem.
+      </p>
+    </div>
+
+    {/* Partner Marquee */}
+    <div className="overflow-hidden relative w-full">
+      <div className="flex marquee space-x-16">
+        {[
+          "River Venture Studio",
+          "AIC-PECF",
+          "Francais Sports Club",
+          "EcoChain Labs",
+          "Green Future Network",
+        ].map((partner, i) => (
+          <div
+            key={i}
+            className="px-8 py-4 rounded-xl bg-white shadow-md border border-emerald-100 min-w-[220px] text-center hover:shadow-lg hover:shadow-emerald-100/50 transition"
+          >
+            <h3 className="text-lg font-semibold text-emerald-700">{partner}</h3>
+          </div>
+        ))}
+
+        {/* Duplicate for seamless loop */}
+        {[
+          "River Venture Studio",
+          "AIC-PECF",
+          "Francais Sports Club",
+          "EcoChain Labs",
+          "Green Future Network",
+        ].map((partner, i) => (
+          <div
+            key={i + 10}
+            className="px-8 py-4 rounded-xl bg-white shadow-md border border-emerald-100 min-w-[220px] text-center hover:shadow-lg hover:shadow-emerald-100/50 transition"
+          >
+            <h3 className="text-lg font-semibold text-emerald-700">{partner}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  {/* Scoped CSS for marquee */}
+  <style>{`
+    @keyframes marquee {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+    .marquee {
+      display: flex;
+      animation: marquee 25s linear infinite;
+    }
+  `}</style>
+
+        {/* <style>{`
+        @keyframes marquee {
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style> */}
+
+</section>
+
 
       {/* Partners Section */}
       {/* <section className="py-20 px-6 bg-gradient-eco-subtle">
@@ -570,10 +645,10 @@ const Index = () => {
       </section> */}
 
       
-<section className="py-20 px-6 bg-gradient-to-b from-emerald-50 via-white to-emerald-50">
-  <div className="container mx-auto max-w-6xl">
+{/* <section className="py-20 px-6 bg-gradient-to-b from-emerald-50 via-white to-emerald-50"></section> */}
+  {/* <div className="container mx-auto max-w-6xl"></div> */}
     {/* Partners Section */}
-    <div className="text-center mb-16">
+    {/* <div className="text-center mb-16">
       <h2 className="text-4xl font-bold mb-6 text-gradient-eco">
         Our Partners
       </h2>
@@ -581,10 +656,11 @@ const Index = () => {
         Collaborating with forward-thinking organizations to build a
         decentralized, regenerative future.
       </p>
-    </div>
-  </div>
-</section>
+    </div> */}
+  {/* </div> */}
 
+
+{/* </section> */}
 
 
 {/* Get Involved Section
@@ -617,7 +693,7 @@ const Index = () => {
 
 
 
-<section className="relative py-24 px-6 bg-gradient-to-b from-emerald-50 via-white to-emerald-50 overflow-hidden">
+<section >
   <div className="container mx-auto max-w-6xl relative z-10">
     {/* Partners Section */}
     {/* <div className="text-center mb-20">
@@ -634,31 +710,30 @@ const Index = () => {
     <div className="overflow-hidden relative w-full mb-28">
       <div className="flex animate-marquee space-x-16">
         {[
-          "River Venture Studio",
-          "AIC-PECF",
-          "Francais Sports Club",
-          "EcoChain Labs",
-          "Green Future Network",
+          // "River Venture Studio",
+          // "AIC-PECF",
+          // "Francais Sports Club",
+          // "EcoChain Labs",
+          // "Green Future Network",
         ].map((partner, i) => (
           <div
             key={i}
-            className="px-8 py-4 rounded-xl bg-white shadow-md border border-emerald-100 min-w-[220px] text-center hover:shadow-lg hover:shadow-emerald-100/50 transition"
           >
-            <h3 className="text-lg font-semibold text-emerald-700">{partner}</h3>
+            <h3 >{partner}</h3>
           </div>
         ))}
 
         {/* Duplicate for seamless loop */}
         {[
-          "River Venture Studio",
-          "AIC-PECF",
-          "Francais Sports Club",
-          "EcoChain Labs",
-          "Green Future Network",
+          // "River Venture Studio",
+          // "AIC-PECF",
+          // "Francais Sports Club",
+          // "EcoChain Labs",
+          // "Green Future Network",
         ].map((partner, i) => (
           <div
             key={i + 10}
-            className="px-8 py-4 rounded-xl bg-white shadow-md border border-emerald-100 min-w-[220px] text-center hover:shadow-lg hover:shadow-emerald-100/50 transition"
+           
           >
             <h3 className="text-lg font-semibold text-emerald-700">{partner}</h3>
           </div>
